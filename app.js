@@ -38,7 +38,7 @@ app.use(function(err, req, res, next){
   // });
 });
 
-var port = 3000;; 
+var port = 3000;
 
 app.listen(port, function(){
   console.log('the server is listening on port: ', port)
