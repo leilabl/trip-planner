@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // serve static files 
 app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/node_modules'))
 
 
 // middleware for our dynamic routes 
