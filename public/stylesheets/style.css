@@ -1,3 +1,9 @@
+body {
+  font-family: 'Lato', sans-serif; }
+
+h1, h2, h3 {
+  font-family: 'Oleo Script', cursive; }
+
 .add-trip-input {
   margin-bottom: 20px; }
 
@@ -23,3 +29,5 @@
 /*.map {
 	min-height: 100%;
 }*/
+/*font-family: 'Kameron', serif;
+font-family: 'Sansita One', cursive;*/
