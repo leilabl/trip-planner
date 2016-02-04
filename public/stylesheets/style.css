@@ -4,46 +4,128 @@ body {
 h1, h2, h3 {
   font-family: 'Oleo Script', cursive; }
 
+#top h1 {
+  color: #fff;
+  text-shadow: 2px 2px 8px #000; }
+
+.btn-front-page {
+  border: solid #fff 1px;
+  background-color: transparent;
+  color: #fff; }
+  .btn-front-page:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff; }
+
+.text-vertical-center {
+  z-index: 1; }
+
+.top-bar {
+  height: 50px;
+  background-color: #353535;
+  /*margin: 0px -15px;*/ }
+
 .add-trip-input {
   margin-bottom: 20px; }
 
 .trip-options {
-  width: 300px;
+  /*width: 300px;*/
   margin: 0 auto; }
 
 .features {
   border: solid #93BDAE 1px;
   border-radius: 5px; }
+  @media (max-width: 768px) {
+    .features {
+      margin-bottom: 20px; } }
 
 .feature-header {
   border-bottom: solid #93BDAE 1px;
-  background-color: #88E0C0;
+  background-color: #6CDAC7;
   padding: 0px 25px;
   padding-top: 5px;
   border-radius: 5px 5px 0px 0px; }
 
 .feature-body {
   padding: 8px 20px;
+  padding-bottom: 0px;
   /*font-size: 14px;*/
   /*min-height: 130px;*/ }
+  .feature-body li {
+    list-style: none;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px; }
+    .feature-body li:last-child {
+      border-bottom: none; }
+  .feature-body ul {
+    padding-left: 15px; }
 
 .daily-list {
   margin-top: 20px;
   padding: 15px; }
 
 .daily-boxes {
-  padding: 20px; }
+  /*padding: 20px;*/ }
+
+.nav-pills {
+  padding-left: 15px;
+  margin-bottom: 20px; }
 
 h3 {
   height: 20px;
   margin-bottom: 15px;
-  color: #575757; }
+  color: #444444; }
 
 .fa {
   margin-right: 5px; }
 
-/*.map {
-	min-height: 100%;
-}*/
-/*font-family: 'Kameron', serif;
-font-family: 'Sansita One', cursive;*/
+.top-bar-text {
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  font-family: 'Oleo Script', cursive;
+  font-size: 30px; }
+
+.map-column {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.title {
+  color: #d9534f; }
+
+.feature-title {
+  margin: 5px 0px;
+  font-size: 20px; }
+
+.nav-pills > li > a {
+  color: #444444; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+  background-color: #6CDAC7;
+  color: #444444;
+  border: 1px solid #93BDAE; }
+
+.trip-options {
+  padding: 0 15px; }
+
+#6CDAC7
+.form-control {
+  /*width: 80%;*/
+  float: left; }
+
+.btn-plus {
+  /*margin-left: 8px !important;*/
+  height: 34px;
+  width: 34px;
+  z-index: -100;
+  background-color: #6CDAC7;
+  border: 1px solid #93BDAE; }
+
+.logo {
+  height: 50px;
+  width: auto;
+  text-align: left;
+  /*background: url(../img/logo.png) no-repeat center center scroll;
+	z-index: 10;*/
+  float: left; }

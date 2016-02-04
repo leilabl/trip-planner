@@ -2,49 +2,80 @@
 
 {% block content %}
 
+<div class="top-bar">
+<img class="logo" src="./img/logo.png">
+<div class="text-white top-bar-text">NYC</div>
+</div>
+
+<div class="container-fluid">
 <div class="row">
-	<div class="col-sm-8">
+	<div class="col-sm-8 map-column">
 	    <!-- Map -->
-	    <section id="contact" class="map">
-	        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-	        <br />
-	        <small>
-	            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-	        </small>
-	        </iframe>
+	    <section id="map-canvas" class="map">
 	    </section>
+
 	</div>
 	<div class="col-sm-4">
-		<h1>NYC</h1>
-		<h3>Day One</h3>
 		<form class="trip-options">
+		<h2 class="title">Day One</h2>
 		    <div class="form-group">
-		        <label>Choose a hotel:</label>
-		        <select class="form-control">
-		            <option value="1">1</option>
-		            <option value="2">2</option>
-		        </select>
+				<label>Choose a hotel:</label>
+				<div class="input-group">
+			        <select class="form-control form-inline">
+			        {% for hotel in all_hotels %}
+			            <option value="{{hotel.name}}">{{hotel.name}}</option>
+			        {% endfor %}
+			        </select>
+				   <span class="input-group-btn">
+					<button type="button" class="btn btn-info btn-xs btn-circle btn-plus"><i class="glyphicon glyphicon-plus"></i></button>				   </span>
+				</div>  
 		    </div>
 		   <div class="form-group">
 		        <label>Choose up to 3 restaurants:</label>
-		        <select class="form-control">
-		            <option value="1">1</option>
-		            <option value="2">2</option>
-		        </select>
+		        <div class="input-group">
+			        <select class="form-control form-inline">
+			        {% for restaurant in all_restaurants %}
+		            	<option value="{{restaurant.name}}">{{restaurant.name}}</option>
+		        	{% endfor %}
+			        </select>
+				   <span class="input-group-btn">
+					<button type="button" class="btn btn-info btn-xs btn-circle btn-plus"><i class="glyphicon glyphicon-plus"></i></button>				   </span>
+				</div>
 		    </div>
 		   <div class="form-group">
 		        <label>Choose activities:</label>
-		        <select class="form-control">
-		            <option value="1">1</option>
-		            <option value="2">2</option>
-		        </select>
+		        <div class="input-group">
+			        <select class="form-control form-inline">
+			        {% for activity in all_activities %}
+		            <option value="{{activity.name}}">{{activity.name}}</option>
+		       		 {% endfor %}
+			        </select>
+				   <span class="input-group-btn">
+					<button type="button" class="btn btn-info btn-xs btn-circle btn-plus"><i class="glyphicon glyphicon-plus"></i></button>				   </span>
+				</div>
 		    </div>
+			<div class="btn-group">
+			  <button type="button" class="btn btn-danger">Add Another Day</button>
+			  <!-- <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    <span class="caret"></span>
+			    <span class="sr-only">Toggle Dropdown</span>
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li><a href="#">Day One</a></li>
+			    <li><a href="#">Day Two</a></li>
+			    <li><a href="#">Day Three</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Add Another Day</a></li>
+			  </ul> -->
+			</div>
+		    
 		</form>
 	</div>
+
 </div>
 
 <div class="row daily-list">
-	<ul class="nav nav-tabs">
+	<ul class="nav nav-pills">
 	  <li role="day" class="active"><a href="#">Day One</a></li>
 	  <li role="day"><a href="#">Day Two</a></li>
 	  <li role="day"><a href="#">Day Three</a></li>
@@ -55,13 +86,11 @@
     <div class="col-sm-4">
       <div class="features">
         <div class="feature-header">
-          <h3><i class="fa fa-building"></i> Hotel</h3>
+          <h3 class="feature-title"><i class="fa fa-building"></i> Hotel</h3>
         </div>
         <div class="feature-body">
 	        <ul>
-	          <li>skljflks</li>
-	          <li>skljflks</li>
-	          <li>skljflks</li>
+	          <li>Smyth TriBeCa</li>
 	        </ul>
         </div>
     </div>
@@ -70,13 +99,13 @@
       <div class="features">
 
         <div class="feature-header">
-          <h3><i class="fa fa-glass"></i> Restaurants</h3>
+          <h3 class="feature-title"><i class="fa fa-glass"></i> Restaurants</h3>
         </div>
         <div class="feature-body">
 	        <ul>
-	          <li>skljflks</li>
-	          <li>skljflks</li>
-	          <li>skljflks</li>
+	          <li>Jungsik</li>
+	          <li>Pylos</li>
+	          <li>Xe Lua</li>
 	        </ul>
         </div>
         </div>
@@ -84,17 +113,18 @@
       <div class="col-sm-4">
           <div class="features">
         <div class="feature-header">
-          <h3><i class="fa fa-camera-retro"></i> Activities</h3>
+          <h3 class="feature-title"><i class="fa fa-camera-retro"></i> Activities</h3>
         </div>
         <div class="feature-body">
 	        <ul>
-	          <li>skljflks</li>
-	          <li>skljflks</li>
-	          <li>skljflks</li>
+	          <li>Ground Zero</li>
+	          <li>Washington Square Park</li>
+	          <li>Battery Park</li>
 	        </ul>        
         </div>
       </div>
       </div>
+</div>
 </div>
 
 {% endblock %}
