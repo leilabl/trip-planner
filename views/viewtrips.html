@@ -3,6 +3,16 @@
 {% block content %}
 
 <div class="row">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <h2 class="title">Trip Planner</h2>
+	      </a>
+	    </div>
+	  </div>
+	</nav>
+
 	<div class="col-sm-8">
 	    <!-- Map -->
 	    <section id="contact" class="map">
@@ -15,8 +25,8 @@
 	    </section>
 	</div>
 	<div class="col-sm-4">
-		<h1>NYC</h1>
-		<h3>Day One</h3>
+		<h1 class="destination">NYC</h1>
+		<h3 class="day">Day One</h3>
 		<form class="trip-options">
 		    <div class="form-group">
 		        <label>Choose a hotel:</label>
@@ -41,6 +51,18 @@
 		    </div>
 		</form>
 	</div>
+	<div class="btn-group">
+	  <button type="button" class="btn btn-danger btn-lg">Day One</button>
+	  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    <span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <div class="dropdown-menu">
+	    <a class="dropdown-item" href="#">Day Two</a>
+	    <a class="dropdown-item" href="#">Day Three</a>
+	    <div class="dropdown-divider"></div>
+	    <a class="dropdown-item" href="#">Add another day</a>
+	  </div>
+	</div>
 </div>
 
 <div class="row daily-list">
@@ -58,7 +80,7 @@
           <h3><i class="fa fa-building"></i> Hotel</h3>
         </div>
         <div class="feature-body">
-	        <ul>
+	        <ul class="list">
 	          <li>skljflks</li>
 	          <li>skljflks</li>
 	          <li>skljflks</li>
@@ -73,7 +95,7 @@
           <h3><i class="fa fa-glass"></i> Restaurants</h3>
         </div>
         <div class="feature-body">
-	        <ul>
+	        <ul class="list">
 	          <li>skljflks</li>
 	          <li>skljflks</li>
 	          <li>skljflks</li>
@@ -87,7 +109,7 @@
           <h3><i class="fa fa-camera-retro"></i> Activities</h3>
         </div>
         <div class="feature-body">
-	        <ul>
+	        <ul class="list">
 	          <li>skljflks</li>
 	          <li>skljflks</li>
 	          <li>skljflks</li>

@@ -1,8 +1,27 @@
 body {
   font-family: 'Lato', sans-serif; }
 
+.row {
+  margin: 0 auto;
+}
+
 h1, h2, h3 {
   font-family: 'Oleo Script', cursive; }
+
+.title {
+  color: #ff5a5f;
+  margin-top: 0;
+}
+
+.destination{
+  color: #ff5a5f;
+  text-align: center;
+}
+
+.day{
+ color: #ff5a5f;
+ text-align: center;
+}
 
 .add-trip-input {
   margin-bottom: 20px; }
@@ -17,7 +36,7 @@ h1, h2, h3 {
 
 .feature-header {
   border-bottom: solid #93BDAE 1px;
-  background-color: #88E0C0;
+  background-color: #45BDBD;
   padding: 0px 25px;
   padding-top: 5px;
   border-radius: 5px 5px 0px 0px; }
@@ -26,6 +45,10 @@ h1, h2, h3 {
   padding: 8px 20px;
   /*font-size: 14px;*/
   /*min-height: 130px;*/ }
+
+.btn-group {
+  margin: 0 auto;
+}
 
 .daily-list {
   margin-top: 20px;
@@ -41,6 +64,13 @@ h3 {
 
 .fa {
   margin-right: 5px; }
+
+.list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 /*.map {
 	min-height: 100%;
